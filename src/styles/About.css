@@ -1,0 +1,24 @@
+.about {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.about-main {
+  flex: 1;
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: white;
+}
+
+.about-main h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.about-main p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}

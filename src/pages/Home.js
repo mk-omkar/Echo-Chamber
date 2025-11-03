@@ -1,11 +1,24 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SearchBar from '../components/SearchBar';
 import '../styles/Home.css';
 
 function Home() {
+  const navigate = useNavigate();
   const trendingTopics = ['Climate Change', 'AI Regulation', 'Elections 2024', 'Healthcare'];
+
+  // Handle trending topic click
+  const handleTopicClick = (topic) => {
+    navigate(`/results?topic=${encodeURIComponent(topic)}`);
+  };
+
+  // Handle CTA button click
+  const handleStartAnalyzing = () => {
+    // Scroll to search bar
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <div className="home">
@@ -26,7 +39,13 @@ function Home() {
             <div className="trending-topics">
               <span className="trending-label">Trending:</span>
               {trendingTopics.map((topic, index) => (
-                <button key={index} className="topic-tag">{topic}</button>
+                <button 
+                  key={index} 
+                  className="topic-tag"
+                  onClick={() => handleTopicClick(topic)}
+                >
+                  {topic}
+                </button>
               ))}
             </div>
           </div>
@@ -98,7 +117,9 @@ function Home() {
               it's about seeing the full picture. Echo Chamber helps you cut through echo chambers 
               and think critically about the news you consume.
             </p>
-            <button className="cta-button">Start Analyzing</button>
+            <button className="cta-button" onClick={handleStartAnalyzing}>
+              Start Analyzing
+            </button>
           </div>
         </section>
       </main>
