@@ -53,10 +53,12 @@
 }
 
 .article-card:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 16px 40px rgba(20, 30, 60, 0.18), 0 2px 8px rgba(0, 0, 0, 0.32);
-  border-color: rgba(120, 120, 140, 0.35);
+  background: rgba(20, 20, 35, 0.97); /* Keep original dark background on hover */
+  transform: none;                    /* Remove scaling or movement */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.35); /* You can keep or remove */
+  border-color: rgba(100, 100, 120, 0.28);
 }
+
 
 .article-card.expanded {
   height: auto;
@@ -67,16 +69,19 @@
 /* Bias Badge */
 .bias-badge {
   position: absolute;
-  top: 16px;
+  top: 6px;       /* move badge higher */
   right: 16px;
-  padding: 8px 18px;
+  padding: 6px 18px;
   border-radius: 30px;
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14);
   color: #fff;
+  /* background color per bias */
+  z-index: 10;    /* ensures badge is above other content */
 }
+
 .article-card[data-bias="Left"] .bias-badge {
   background: #3b82f6;
 }
@@ -100,21 +105,24 @@
 
 /* Title */
 .article-card h4 {
-  margin: 0 0 17px 0;
+  margin: 28px 0 17px 0;  /* add extra space above title */
   font-size: 1.15rem;
   color: #f3f4f6;
   font-weight: 700;
   line-height: 1.35;
-  min-height: 38px; /* Consistent height for vertical rhythm */
+  min-height: 38px;
   width: 100%;
 }
+
 
 /* Content */
 .article-content {
   flex-grow: 1;
   overflow-y: auto;
   width: 100%;
+  padding-top: 20px;  /* shifts content down */
 }
+
 .summary {
   margin: 0 0 10px 0;
   font-size: 1rem;
