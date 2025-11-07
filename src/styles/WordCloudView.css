@@ -1,4 +1,55 @@
-.wordcloud-view {
+.wordcloud-page {
+  padding: 20px; /* Matches App.css main padding */
+  min-height: 80vh; /* Matches App.css for full viewport usage */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafafa; /* From index.css */
+  color: #333; /* From index.css */
+  font-family: Arial, sans-serif; /* From index.css */
   text-align: center;
-  margin: 20px 0;
+}
+
+.wordcloud-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #007bff; /* Accent color for headers, can be customized */
+}
+
+.wordcloud-page p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+/* Assuming WordCloudView has a class like .wordcloud-container for the visualization */
+.wordcloud-container {
+  width: 100%;
+  max-width: 800px;
+  height: 500px; /* Adjustable based on library */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .wordcloud-page {
+    padding: 15px;
+  }
+  .wordcloud-page h1 {
+    font-size: 2rem;
+  }
+  .wordcloud-page p {
+    font-size: 1rem;
+  }
+  .wordcloud-container {
+    height: 400px;
+  }
 }

@@ -3,8 +3,9 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #0b1a3a 0%, #1c2a68 100%);
 }
+
 
 .home-main {
   flex: 1;
@@ -42,6 +43,7 @@
   margin: 0 auto;
 }
 
+/* Trending Topics */
 .trending-topics {
   margin-top: 20px;
   display: flex;
@@ -132,8 +134,12 @@
 /* Features Section */
 .features-section {
   padding: 80px 20px;
-  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  background: linear-gradient(135deg, #0b1a3a 0%, #3a3f90 100%); /* dark blue gradients */
+  /* or a solid dark background */
+  /* background: #1a1a2e; */
 }
+
+
 
 .features-grid {
   display: grid;
