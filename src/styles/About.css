@@ -1,24 +1,300 @@
-.about {
-  min-height: 100vh;
+/* General Page */
+.about-page {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom, #f4f7ff, #ffffff);
+  color: #1f1f1f;
+  margin: 0;
+  padding: 0;
+}
+
+/* Unified Header Content - Dark Blue like Home page */
+.about-header-content {
+  padding: 40px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #0b1a3a 0%, #3a3f90 100%);
+  color: #ffffff;
+  border-radius: 18px;
+  margin: 20px auto;
+  max-width: 1200px;
+  box-shadow: 0 5px 22px rgba(0, 0, 0, 0.3);
+}
+
+.about-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #60a5fa; /* light blue accent */
+}
+
+.about-subtitle {
+  font-size: 18px;
+  opacity: 0.9;
+  margin: 0;
+  color: #e0e0e0; /* slightly lighter for contrast */
+}
+
+/* Story Section */
+.about-story {
   display: flex;
-  flex-direction: column;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  align-items: center;
+  justify-content: space-between;
+  margin: 60px 60px;
+  gap: 40px;
 }
 
+.story-text {
+  max-width: 600px;
+}
+
+.story-text h2 {
+  font-size: 28px;
+  color: #1e2a5e;
+  margin-bottom: 10px;
+}
+
+.story-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.story-image img {
+  width: 420px;
+  height: 300px;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.story-image img:hover {
+  transform: scale(1.04);
+}
+
+/* Mission Section */
 .about-main {
-  flex: 1;
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: 0 auto;
-  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 60px;
+  gap: 40px;
 }
 
-.about-main h2 {
-  font-size: 2.5rem;
+.about-text {
+  max-width: 600px;
+}
+
+.about-text h2 {
+  color: #1e2a5e;
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+.about-text p {
+  font-size: 16px;
+  margin-bottom: 22px;
+  color: #333;
+}
+
+.about-image img {
+  width: 420px;
+  height: 320px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Values Section */
+.about-values {
+  background: #eef1ff;
+  padding: 50px 60px;
+  text-align: center;
+}
+
+.about-values h2 {
+  color: #1e2a5e;
+  font-size: 28px;
   margin-bottom: 30px;
 }
 
-.about-main p {
-  font-size: 1.1rem;
+.values-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.value-card {
+  background: white;
+  border-radius: 14px;
+  padding: 25px;
+  width: 280px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.value-card h3 {
+  color: #1e2a5e;
+  margin-bottom: 8px;
+}
+
+.value-card p {
+  color: #444;
+  font-size: 15px;
+}
+
+/* Team Section */
+.about-team {
+  padding: 60px;
+  text-align: center;
+}
+
+.about-team h2 {
+  font-size: 28px;
+  color: #1e2a5e;
+  margin-bottom: 40px;
+}
+
+.team-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.team-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #1e2a5e;
+  margin-bottom: 12px;
+}
+
+.team-card h3 {
+  color: #1e2a5e;
+  font-size: 20px;
+}
+
+.team-card p {
+  color: #555;
+  font-size: 15px;
+}
+
+/* Join Us Section */
+.join-us {
+  background: linear-gradient(to right, #e8ecff, #f5f8ff);
+  padding: 60px 40px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 50, 0.1);
+  margin-top: 60px;
+  font-family: "Poppins", sans-serif;
+}
+
+.join-us h2 {
+  font-size: 36px;
+  color: #1e2a5e;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.join-us p {
+  font-size: 18px;
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
   line-height: 1.8;
+}
+
+/* Buttons */
+.join-btn,
+.worldcloud-btn {
+  background-color: #1e2a5e;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 32px;
+  font-size: 17px;
+  cursor: pointer;
+  margin: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(30, 42, 94, 0.3);
+}
+
+.join-btn:hover,
+.worldcloud-btn:hover {
+  background-color: #25368a;
+  transform: translateY(-3px);
+}
+
+/* Footer */
+.about-footer {
+  background-color: #1e2a5e;
+  color: white;
+  text-align: center;
+  padding: 18px 0;
+  font-size: 15px;
+}
+
+/* Responsive (max 420px) */
+@media (max-width: 420px) {
+  .about-story,
+  .about-main {
+    flex-direction: column;
+    margin: 25px;
+  }
+
+  .story-image img,
+  .about-image img {
+    width: 320px;
+    height: 220px;
+  }
+
+  .values-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-container {
+    justify-content: center;
+  }
+
+  .join-us {
+    padding: 40px 20px;
+  }
+
+  .join-us h2 {
+    font-size: 26px;
+  }
+
+  .join-us p {
+    font-size: 15px;
+  }
+
+  .join-btn,
+  .worldcloud-btn {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
 }

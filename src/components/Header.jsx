@@ -7,18 +7,10 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const closeMenu = () => setMenuOpen(false);
 
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
-
-  // Check if link is active
-  const isActive = (path) => {
-    return location.pathname === path ? 'active' : '';
-  };
+  const isActive = (path) => location.pathname === path ? 'active' : '';
 
   return (
     <header className="header">
@@ -40,13 +32,6 @@ function Header() {
             onClick={closeMenu}
           >
             Home
-          </Link>
-          <Link 
-            to="/results" 
-            className={`nav-link ${isActive('/results')}`}
-            onClick={closeMenu}
-          >
-            Results
           </Link>
           <Link 
             to="/about" 

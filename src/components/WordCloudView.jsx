@@ -1,46 +1,56 @@
-import React, { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom'; // For URL params if topic is passed
-import axios from 'axios';
-import WordCloudView from '../components/WordCloudView'; // Your existing component
-import '../styles/WordCloudView.css'; // Link to the CSS I provided earlier
+// EnhancedSimpleWordCloudView.jsx
+import React, { useEffect, useState } from 'react';
+import '../styles/WordCloudView.css';
 
-function WordCloud() {
-  const [searchParams] = useSearchParams();
-  const topic = searchParams.get('topic') || 'climate'; // Default topic; adjust as needed
-  const [wordData, setWordData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+const sampleWords = [
+  { text: 'Bias', value: 50 },
+  { text: 'Media', value: 40 },
+  { text: 'News', value: 30 },
+  { text: 'Echo', value: 20 },
+  { text: 'Chamber', value: 15 },
+  { text: 'Truth', value: 25 },
+  { text: 'Opinion', value: 10 },
+  { text: 'Focus', value: 18 },
+  { text: 'Spectrum', value: 22 },
+];
 
-  // Fetch word cloud data from backend on mount or topic change
+export default function EnhancedSimpleWordCloudView() {
+  const [words, setWords] = useState([]);
+
   useEffect(() => {
-    const fetchWordData = async () => {
-      try {
-        setLoading(true);
-        const response = await axios.get(/api/wordcloud?topic=${topic}); // Replace with your actual API endpoint
-        setWordData(response.data); // Expected: array like [{ text: 'climate', value: 50 }]
-      } catch (err) {
-        setError('Failed to load word cloud data. Please try again.');
-        console.error(err);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchWordData();
-  }, [topic]);
+    setWords(sampleWords);
+  }, []);
+
+  // Calculate max and min for color scaling
+  const maxValue = Math.max(...words.map((w) => w.value), 1);
+  const minValue = Math.min(...words.map((w) => w.value), 0);
+
+  // Function to map value to color (blue shades)
+  const mapValueToColor = (value) => {
+    const ratio = (value - minValue) / (maxValue - minValue);
+    const blueIntensity = Math.floor(100 + ratio * 155); // 100-255
+    return `rgb(50, 100, ${blueIntensity})`;
+  };
 
   return (
-    <div className="wordcloud-page">
-      <h1>Word Cloud for Topic: {topic}</h1>
-      <p>Explore the most frequent keywords from news articles. Word size indicates usage frequency across sources.</p>
-      
-      {loading && <p>Loading word cloud...</p>}
-      {error && <p className="error">{error}</p>}
-      {!loading && !error && <WordCloudView data={wordData} />}
-      
-      {/* Optional: Add a back button or link to results */}
-      <button onClick={() => window.history.back()}>Back to Results</button>
+    <div className="enhanced-wordcloud-container">
+      <h2>News Bias Word Cloud (Enhanced)</h2>
+      <div className="wordcloud">
+        {words.map(({ text, value }, idx) => {
+          const fontSize = 12 + (36 * (value - minValue)) / (maxValue - minValue);
+          const bgColor = mapValueToColor(value);
+          return (
+            <div
+              key={idx}
+              className="word-box"
+              style={{ fontSize: `${fontSize}px`, backgroundColor: bgColor }}
+              title={`${text} (${value})`}
+            >
+              {text}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
-
-export default WordCloud;

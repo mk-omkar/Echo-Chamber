@@ -11,7 +11,6 @@ function SentimentChart({ data }) {
 
   const sentimentData = data || defaultData;
 
-  // Calculate percentages for bar charts
   const getBiasColor = (bias) => {
     const colors = {
       left: '#3b82f6',
@@ -44,7 +43,6 @@ function SentimentChart({ data }) {
             <h4>Left-Leaning</h4>
             <span className="source-count">5 sources</span>
           </div>
-          
           <div className="sentiment-bars">
             {Object.entries(sentimentData.left).map(([sentiment, value]) => (
               <div key={sentiment} className="sentiment-row">
@@ -55,9 +53,9 @@ function SentimentChart({ data }) {
                   <span className="sentiment-name">{sentiment}</span>
                 </div>
                 <div className="bar-container">
-                  <div 
-                    className="bar" 
-                    style={{ 
+                  <div
+                    className="bar"
+                    style={{
                       width: `${value}%`,
                       background: getSentimentColor(sentiment)
                     }}
@@ -76,7 +74,6 @@ function SentimentChart({ data }) {
             <h4>Center</h4>
             <span className="source-count">3 sources</span>
           </div>
-          
           <div className="sentiment-bars">
             {Object.entries(sentimentData.center).map(([sentiment, value]) => (
               <div key={sentiment} className="sentiment-row">
@@ -87,9 +84,9 @@ function SentimentChart({ data }) {
                   <span className="sentiment-name">{sentiment}</span>
                 </div>
                 <div className="bar-container">
-                  <div 
-                    className="bar" 
-                    style={{ 
+                  <div
+                    className="bar"
+                    style={{
                       width: `${value}%`,
                       background: getSentimentColor(sentiment)
                     }}
@@ -108,7 +105,6 @@ function SentimentChart({ data }) {
             <h4>Right-Leaning</h4>
             <span className="source-count">5 sources</span>
           </div>
-          
           <div className="sentiment-bars">
             {Object.entries(sentimentData.right).map(([sentiment, value]) => (
               <div key={sentiment} className="sentiment-row">
@@ -119,9 +115,9 @@ function SentimentChart({ data }) {
                   <span className="sentiment-name">{sentiment}</span>
                 </div>
                 <div className="bar-container">
-                  <div 
-                    className="bar" 
-                    style={{ 
+                  <div
+                    className="bar"
+                    style={{
                       width: `${value}%`,
                       background: getSentimentColor(sentiment)
                     }}
@@ -139,7 +135,10 @@ function SentimentChart({ data }) {
       <div className="sentiment-summary">
         <div className="summary-card">
           <h5>Overall Sentiment</h5>
-          <p>Left-leaning sources are <strong>more positive</strong>, while right-leaning sources show <strong>more negative</strong> sentiment on this topic.</p>
+          <p>
+            Left-leaning sources are <strong>more positive</strong>, while right-leaning sources show{' '}
+            <strong>more negative</strong> sentiment on this topic.
+          </p>
         </div>
         <div className="legend">
           <div className="legend-item">

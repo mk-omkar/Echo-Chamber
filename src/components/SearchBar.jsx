@@ -4,12 +4,11 @@ import '../styles/SearchBar.css';
 
 function SearchBar() {
   const [query, setQuery] = useState('');
-  const navigate = useNavigate(); // To navigate programmatically
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (query.trim()) {
-      // Navigate to results page with query as URL param
       navigate(`/results?topic=${encodeURIComponent(query)}`);
     }
   };
