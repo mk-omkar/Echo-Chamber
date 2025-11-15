@@ -48,7 +48,7 @@ function SentimentChart({ data }) {
               <div key={sentiment} className="sentiment-row">
                 <div className="sentiment-label">
                   <span className={`sentiment-icon ${sentiment}`}>
-                    {sentiment === 'positive' ? '😊' : sentiment === 'neutral' ? '😐' : '😟'}
+                    {sentiment === 'positive' ? '' : sentiment === 'neutral' ? '' : ''}
                   </span>
                   <span className="sentiment-name">{sentiment}</span>
                 </div>
@@ -79,7 +79,7 @@ function SentimentChart({ data }) {
               <div key={sentiment} className="sentiment-row">
                 <div className="sentiment-label">
                   <span className={`sentiment-icon ${sentiment}`}>
-                    {sentiment === 'positive' ? '😊' : sentiment === 'neutral' ? '😐' : '😟'}
+                    {sentiment === 'positive' ? '' : sentiment === 'neutral' ? '' : ''}
                   </span>
                   <span className="sentiment-name">{sentiment}</span>
                 </div>
@@ -110,7 +110,7 @@ function SentimentChart({ data }) {
               <div key={sentiment} className="sentiment-row">
                 <div className="sentiment-label">
                   <span className={`sentiment-icon ${sentiment}`}>
-                    {sentiment === 'positive' ? '😊' : sentiment === 'neutral' ? '😐' : '😟'}
+                    {sentiment === 'positive' ? '' : sentiment === 'neutral' ? '' : ''}
                   </span>
                   <span className="sentiment-name">{sentiment}</span>
                 </div>
