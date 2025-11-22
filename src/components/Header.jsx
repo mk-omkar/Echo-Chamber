@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../styles/Header.css';
-import logo from '../styles/echo.png';
+import logo from '../styles/ec1.jpg';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,7 +20,7 @@ function Header() {
             <img src={logo} alt="Echo Chamber Logo" className="logo-image" />
             <div className="logo-text">
               <h1 className="logo">Echo Chamber</h1>
-              <p className="tagline">Analyze media bias with data</p>
+              <p className="tagline">The Science Of Media Bias</p>
             </div>
           </Link>
         </div>
@@ -39,6 +39,13 @@ function Header() {
             onClick={closeMenu}
           >
             About
+          </Link>
+          <Link 
+            to="/contact" 
+            className={`nav-link ${isActive('/contact')}`}
+            onClick={closeMenu}
+          >
+            Contact
           </Link>
         </nav>
 

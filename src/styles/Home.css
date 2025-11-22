@@ -3,8 +3,8 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #a6cef7 0%, #cec2f5 50%, #e9d6fb 100%);
-  color: #22223B;
+  background: #f7f9fc; /* clean soft white */
+  color: #1a1a1a;
 }
 
 /* Main content area */
@@ -13,26 +13,23 @@
   padding: 0;
 }
 
-/* Unified section box styles for edge-to-edge effect, height, centering */
+/* Section Boxes */
 .hero-section,
 .how-it-works,
 .features-section,
 .why-section {
-  width: 92vw;                  /* decreased width for side margins */
+  width: 92vw;
   max-width: 92vw;
-  min-height: 480px;             
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 18px;
-  background: rgba(255,255,255,0.4);
-  box-shadow: 0 4px 24px rgba(102,126,234,0.13);
-  padding: 48px 2vw;            
-  margin-top: 32px;
-  margin-bottom: 32px;
+  min-height: 420px;
+  margin: 32px auto;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08); /* soft shadow */
+  padding: 48px 2vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;       
-  align-items: center;           
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 700px) {
@@ -40,245 +37,195 @@
   .how-it-works,
   .features-section,
   .why-section {
-    width: 97vw;    /* more comfortable side gap on small screens */
-    max-width: 97vw;
-    min-height: 320px;
+    width: 97vw;
+    min-height: 280px;
     border-radius: 10px;
-    padding: 22px 0.5vw;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    padding: 22px 1vw;
   }
 }
 
 /* Hero Section Typography */
 .hero-title {
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 700;
-  color: #3b3686;
-  margin-bottom: 32px;
-  line-height: 1.2;
+color: #1e2a5e;
+  margin-bottom: 20px;
   text-align: center;
-  text-shadow: 0 2px 6px rgba(134,134,190,0.2);
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
-  color: #5a4eaf;
-  max-width: 800px;
-  margin: 0 auto 36px auto;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
   text-align: center;
+  line-height: 1.6;
 }
 
 /* Search Container */
 .search-container {
   width: 100%;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 20px auto;
 }
 
 /* Trending Topics */
 .trending-topics {
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
 }
+
 .trending-label {
-  color: #3b3686;
-  font-weight: 700;
-  margin-right: 10px;
-  text-shadow: 0 1px 3px rgba(150,150,200,0.2);
+  color: #1e2a5e;
+  font-weight: 600;
 }
+
 .topic-tag {
-  background: rgba(102,126,234,0.3);
-  color: #2d237a;
-  border: 1px solid rgba(102,126,234,0.6);
+  background: #e3f2fd;
+  color: #0a3d62;
+  /* color: #1e2a5e; */
   padding: 8px 16px;
-  border-radius: 20px;
+  border-radius: 16px;
   cursor: pointer;
   font-size: 0.9rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 5px rgba(102,126,234,0.08);
+  transition: 0.3s ease;
 }
+
 .topic-tag:hover {
-  background: rgba(102,126,234,0.6);
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(102,126,234,0.14);
+  background: #bbdefb;
 }
 
 /* Section Title */
 .section-title {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
+  /* color: #187bcd; */
+  color: #1e2a5e;
+  margin-bottom: 40px;
   text-align: center;
-  color: #3b3686;
-  margin-bottom: 50px;
-  text-shadow: 0 2px 6px rgba(134,134,190,0.2);
 }
 
-/* How It Works Section Cards */
+/* Steps Grid */
 .steps-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
-  width: 100%;
-  justify-items: center;
-  align-items: start;
-}
-.step-card {
-  background: #f0f2f7;
-  border-radius: 16px;
-  padding: 40px 30px;
-  text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 15px rgba(102,126,234,0.13);
-  width: 100%;
-  max-width: 360px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.step-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 14px 40px rgba(102,126,234,0.14);
-  background: #e3e7ff;
-}
-.step-icon {
-  font-size: 4rem;
-  margin-bottom: 20px;
-  color: #667eea;
-}
-.step-card h3 {
-  font-size: 1.5rem;
-  color: #2d237a;
-  margin-bottom: 15px;
-  text-align: center;
-}
-.step-card p {
-  font-size: 1rem;
-  color: #555a80;
-  line-height: 1.6;
-  text-align: center;
-}
-
-/* Features Section Cards */
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
   width: 100%;
-  justify-items: center;
 }
+
+.step-card {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 14px;
+  padding: 30px;
+  text-align: center;
+  transition: 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+}
+
+.step-icon {
+  font-size: 3rem;
+  /* color: #187bcd; */
+  color: #1e2a5e;
+  margin-bottom: 15px;
+}
+
+.step-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.step-card p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Features */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
 .feature-item {
   display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  background: #dbe1fb;
-  padding: 25px;
+  gap: 15px;
+  background: #ffffff;
+  padding: 20px;
   border-radius: 12px;
-  border: 1px solid #bbc7fb;
-  transition: all 0.3s ease;
-  box-shadow: 0 3px 15px rgba(102,126,234,0.10);
-  width: 100%;
-  max-width: 360px;
+  border: 1px solid #e6e6e6;
+  transition: 0.3s ease;
 }
+
 .feature-item:hover {
-  background: #c2cdfe;
-  transform: translateX(5px);
-  box-shadow: 0 8px 25px rgba(102,126,234,0.16);
+  background: #f5faff;
 }
+
 .feature-icon {
   font-size: 2rem;
-  flex-shrink: 0;
-  color: #4258e1;
+  /* color: #187bcd; */
+  color: #1e2a5e;
 }
+
 .feature-item h4 {
-  font-size: 1.2rem;
-  color: #2d237a;
-  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #222;
 }
+
 .feature-item p {
-  font-size: 0.95rem;
-  color: #4a4f7a;
-  line-height: 1.5;
+  font-size: 0.9rem;
+  color: #555;
 }
 
 /* Why Section */
 .why-content {
-  margin: 0 auto;
-  width: 100%;
   max-width: 600px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.why-text {
-  font-size: 1.2rem;
-  color: #3b3686;
-  line-height: 1.8;
-  margin-bottom: 40px;
-  text-align: center;
-}
-.cta-button {
-  background: #667eea;
-  color: #ffffff;
-  font-size: 1.2rem;
-  font-weight: 600;
-  padding: 15px 40px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  box-shadow: 0 6px 20px rgba(102,126,234,0.12);
-  transition: all 0.3s ease;
-}
-.cta-button:hover {
-  background: #5568d3;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(102,126,234,0.14);
 }
 
-/* Responsive Design */
+.why-text {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 35px;
+  line-height: 1.7;
+}
+
+/* CTA Button */
+.cta-button {
+  background: #187bcd;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 12px 34px;
+  border-radius: 25px;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #125a94;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 2rem;
-  }
-  .hero-subtitle {
-    font-size: 1rem;
-  }
-  .section-title {
-    font-size: 2rem;
-  }
-  .steps-grid,
-  .features-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  .trending-topics {
-    justify-content: center;
-  }
-  .step-card, .feature-item {
-    max-width: 99vw;
-  }
+  .hero-title { font-size: 2rem; }
+  .hero-subtitle { font-size: 0.95rem; }
+  .section-title { font-size: 1.8rem; }
 }
 
 @media (max-width: 480px) {
-  .hero-title {
-    font-size: 1.5rem;
-  }
-  .hero-subtitle {
-    font-size: 0.9rem;
-  }
-  .section-title {
-    font-size: 1.5rem;
-  }
-  .step-card, .feature-item {
-    max-width: 99vw;
-    padding: 24px 6px;
-  }
+  .hero-title { font-size: 1.6rem; }
+  .hero-subtitle { font-size: 0.9rem; }
+  .step-card, .feature-item { padding: 20px; }
 }

@@ -44,7 +44,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 20px 22px 20px 22px;
-  background: rgba(20, 20, 35, 0.97);
+  background: #1e293b; /* Changed: dark blue theme */
   border: 1.5px solid rgba(100, 100, 120, 0.28);
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
@@ -54,7 +54,7 @@
 }
 
 .article-card:hover {
-  background: rgba(20, 20, 35, 0.97);
+  background: #273449; /* Changed: slightly lighter on hover */
   transform: none;
   box-shadow: 0 4px 20px rgba(0,0,0,0.35);
   border-color: rgba(100, 100, 120, 0.28);
@@ -138,7 +138,7 @@
 .popup-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(30, 42, 94, 0.6); /* Changed: blue overlay */
   backdrop-filter: blur(4px);
   z-index: 9999;
   display: flex;
@@ -147,7 +147,7 @@
 }
 
 .popup-content {
-  background: #1e293b;
+  background: #1e293b; /* Changed: dark blue */
   max-width: 90vw;
   width: 700px;
   max-height: 90vh;
@@ -190,7 +190,7 @@
   display: block;
   width: 100%;
   padding: 12px 0;
-  background: linear-gradient(90deg, #667eea 10%, #764ba2 90%);
+  background: linear-gradient(90deg, #667eea 10%, #764ba2 90%); /* gradient matches About page */
   color: #fff;
   border: none;
   border-radius: 9px;

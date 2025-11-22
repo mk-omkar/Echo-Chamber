@@ -1,210 +1,231 @@
+/* General Page */
 .about-page {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #a6cef7 0%, #cec2f5 50%, #e9d6fb 100%);
-  color: black;
+  background: linear-gradient(to bottom, #f4f7ff, #ffffff);
+  color: #1f1f1f;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-/* Unified Header Content */
+/* Header - updated to align with story/main sections */
 .about-header-content {
-  padding: 40px 2vw;
-  text-align: center;
-  background: linear-gradient(135deg, #0b1a3a 0%, #3a3f90 100%);
-  color: #ffffff;
-  border-radius: 20px;
-  margin: 34px auto 46px auto;
-  width: 92vw;
-  max-width: 1200px;
-  box-shadow: 0 7px 32px rgba(80, 150, 255, 0.16), 0 0 0 6px #98bdf622 inset;
+  background: linear-gradient(90deg, #1e2a5e, #3248a8);
+  color: white;
+  padding: 35px 60px;
+  width: 92vw;                  
+  max-width: 1200px;            
+  margin: 60px auto 40px auto;  
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 18px;          
+  text-align: center;          
+  box-sizing: border-box;
 }
 
 .about-title {
-  font-size: 2.6rem;
+  font-size: 40px;
   font-weight: 700;
-  margin-bottom: 10px;
-  color: #1e9ac0;
-  text-shadow: 0 6px 30px #11255855, 0 1.5px 2px #fff;
-  letter-spacing: 1px;
 }
 
 .about-subtitle {
-  font-size: 1.18rem;
-  opacity: 0.92;
-  margin: 0;
-  color: #e0e0e0;
+  font-size: 18px;
+  opacity: 0.9;
 }
 
-/* Card/Section Styles - Edge-to-edge look */
-.about-story,
-.about-main {
+/* Story Section */
+.about-story {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 60px 60px;
   gap: 40px;
-  background: rgba(255,255,255,0.14);
-  border-radius: 20px;
-  width: 92vw;
-  max-width: 1200px;
-  margin: 0 auto 44px auto;
-  box-shadow: 0 7px 32px #98bdf622, 0 0 0 5px #d4eaff18 inset;
-  padding: 48px 3vw;
+  flex-wrap: wrap;
 }
 
-.story-text,
+.story-text {
+  max-width: 600px;
+}
+
+.story-text h2 {
+  font-size: 28px;
+  color: #1e2a5e;
+  margin-bottom: 10px;
+}
+
+.story-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.story-image img {
+  width: 420px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.story-image img:hover {
+  transform: scale(1.04);
+}
+
+/* Mission Section */
+.about-main {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 60px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
 .about-text {
   max-width: 600px;
 }
-.story-text h2,
+
 .about-text h2 {
-  font-size: 2rem;
-  color: black;
+  color: #1e2a5e;
   margin-bottom: 10px;
-  font-weight: 700;
-  text-shadow: 0 1px 7px #b2e4f5cc;
-}
-.story-text p,
-.about-text p {
-  font-size: 1.08rem;
-  line-height: 1.67;
-  margin-bottom: 18px;
-  color: #192f60;
+  font-size: 26px;
 }
 
-.story-image img,
+.about-text p {
+  font-size: 16px;
+  margin-bottom: 22px;
+  color: #333;
+}
+
 .about-image img {
   width: 420px;
-  height: 300px;
-  border-radius: 18px;
-  box-shadow: 0 8px 18px #4c7ff844, 0 0 0 2px #60a5fa77;
-  transition: transform 0.3s;
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
 }
-.story-image img:hover,
+
 .about-image img:hover {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
 /* Values Section */
 .about-values {
-  background: rgba(255,255,255,0.15);
-  padding: 48px 3vw;
-  width: 92vw;
-  max-width: 1200px;
-  margin: 0 auto 44px auto;
-  border-radius: 20px;
-  box-shadow: 0 6px 20px #b2e4f525, 0 0 0 4px #e8ebff20 inset;
+  background: #eef1ff;
+  padding: 50px 60px;
   text-align: center;
 }
+
 .about-values h2 {
-  color: black;
-  font-size: 2rem;
+  color: #1e2a5e;
+  font-size: 28px;
   margin-bottom: 30px;
-  text-shadow: 0 2px 10px #b2e4f5cc;
 }
+
 .values-container {
   display: flex;
   justify-content: space-between;
-  gap: 34px;
+  gap: 25px;
+  flex-wrap: wrap;
 }
+
 .value-card {
   background: white;
-  border-radius: 17px;
-  padding: 28px;
+  border-radius: 14px;
+  padding: 25px;
   width: 280px;
-  box-shadow: 0 7px 18px #4c7ff819;
-  transition: all 0.3s;
-  border: 1px solid #e4f0ff;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .value-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 14px 32px #60a5fa2b, 0 0 0 7px #e8ebff33 inset;
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
+
 .value-card h3 {
-  color:black;
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-  font-weight: 700;
+  color: #1e2a5e;
+  margin-bottom: 8px;
 }
+
 .value-card p {
   color: #444;
-  font-size: 1rem;
+  font-size: 15px;
 }
 
 /* Team Section */
 .about-team {
-  width: 92vw;
-  max-width: 1200px;
-  margin: 0 auto 44px auto;
-  background: rgba(255,255,255,0.13);
-  border-radius: 20px;
-  box-shadow: 0 6px 20px #b2e4f525, 0 0 0 4px #e8ebff20 inset;
+  padding: 60px;
   text-align: center;
-  padding: 50px 3vw;
 }
+
 .about-team h2 {
-  font-size: 2rem;
-  color: black;
+  font-size: 28px;
+  color: #1e2a5e;
   margin-bottom: 40px;
-  text-shadow: 0 2px 10px #b2e4f5cc;
 }
+
 .team-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 25px;
 }
+
 .team-card {
   background: #fff;
-  border-radius: 18px;
+  border-radius: 16px;
   padding: 25px;
-  width: 220px;
+  width: 260px;
   text-align: center;
-  box-shadow: 0 7px 14px #4c7ff819;
-  transition: 0.3s;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease;
 }
+
 .team-card:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 14px 28px #60a5fa2b, 0 0 0 6px #e8ebff33 inset;
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
+
 .team-card img {
-  width: 92px;
-  height: 92px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  border: 2px solid #2473e6;
+  border: 3px solid #1e2a5e;
   margin-bottom: 12px;
 }
+
 .team-card h3 {
-  color: #3843a6;
-  font-size: 19px;
+  color: #1e2a5e;
+  font-size: 20px;
 }
+
 .team-card p {
-  color: black;
-  font-size: 1rem;
+  color: #555;
+  font-size: 15px;
 }
 
 /* Join Us Section */
 .join-us {
-  background: linear-gradient(90deg, #e8ecff 60%, #f5f8ff 100%);
-  padding: 56px 3vw;
+  background: linear-gradient(to right, #e8ecff, #f5f8ff);
+  padding: 60px 40px;
   text-align: center;
-  border-radius: 22px;
-  box-shadow: 0 6px 20px #b2e4f525, 0 0 0 5px #e8ebffa0 inset;
-  margin: 60px auto 60px auto;  /* increased bottom margin for extra gap from footer */
-  width: 92vw;
-  max-width: 1200px;
-  font-family: "Poppins", sans-serif;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 50, 0.1);
+  margin-top: 60px;
 }
+
 .join-us h2 {
-  font-size: 2.1rem;
-  color: black;
+  font-size: 36px;
+  color: #1e2a5e;
   margin-bottom: 20px;
   font-weight: 700;
-  text-shadow: 0 2px 10px #b2e4f5cc;
 }
+
 .join-us p {
-  font-size: 1.16rem;
-  color: #192f60;
+  font-size: 18px;
+  color: #444;
   max-width: 700px;
   margin: 0 auto 30px auto;
   line-height: 1.8;
@@ -213,7 +234,7 @@
 /* Buttons */
 .join-btn,
 .worldcloud-btn {
-  background-color: #2473e6;
+  background-color: #1e2a5e;
   color: white;
   border: none;
   border-radius: 30px;
@@ -221,9 +242,10 @@
   font-size: 17px;
   cursor: pointer;
   margin: 10px;
-  transition: all 0.3s;
-  box-shadow: 0 7px 18px #2473e677;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(30, 42, 94, 0.3);
 }
+
 .join-btn:hover,
 .worldcloud-btn:hover {
   background-color: #25368a;
@@ -232,69 +254,43 @@
 
 /* Footer */
 .about-footer {
-  background-color: #0b1a3a;
-  color: #fff;
+  background-color: #1e2a5e;
+  color: white;
   text-align: center;
   padding: 18px 0;
   font-size: 15px;
-  box-shadow: 0 -4px 28px #98bdf622;
 }
 
-/* Responsive adjustments */
-@media (max-width: 900px) {
-  .about-story,
-  .about-main,
-  .about-values,
-  .about-team,
-  .join-us,
+/* Responsive */
+@media (max-width: 420px) {
   .about-header-content {
-    width: 99vw;
-    max-width: 99vw;
-    padding-left: 8px;
-    padding-right: 8px;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .about-header-content {
-    padding: 27px 4vw;
-    font-size: 2.1rem;
-  }
-}
-@media (max-width: 600px) {
-  .about-story,
-  .about-main,
-  .about-values,
-  .about-team,
-  .join-us,
-  .about-header-content {
-    flex-direction: column;
-    width: 99vw;
-    max-width: 99vw;
-    padding: 10px 1vw;
-    margin: 14px 0;
-  }
-  .story-image img,
-  .about-image img {
     width: 98vw;
-    height: auto;
-    margin-bottom: 10px;
+    padding: 20px 2vw;
+    margin: 40px auto 20px auto;
   }
-  .values-container,
-  .team-container {
+
+  .about-story,
+  .about-main {
+    flex-direction: column;
+    margin: 25px 20px;
+    text-align: center;
+  }
+
+  .story-text,
+  .about-text {
+    max-width: 100%;
+  }
+
+  .values-container {
     flex-direction: column;
     align-items: center;
-    gap: 14px;
   }
-  .value-card,
-  .team-card {
-    width: 97vw;
-    padding: 16px;
+
+  .team-container {
+    justify-content: center;
   }
-  .join-us h2,
-  .about-title {
-    font-size: 1.2rem;
-  }
-  .about-header-content {
-    font-size: 1.5rem;
+
+  .join-us {
+    padding: 40px 20px;
   }
 }

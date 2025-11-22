@@ -121,7 +121,7 @@ const About = () => {
         </p>
       </section>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

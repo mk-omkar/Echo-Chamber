@@ -388,7 +388,7 @@ function Results() {
           </div>
         )}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
