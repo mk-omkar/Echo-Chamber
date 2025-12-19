@@ -6,9 +6,8 @@ src/
 │   ├── SearchBar.jsx
 │   ├── SentimentChart.jsx
 │   ├── WordCloudView.jsx
-│   ├── ArticleCard.jsx
 │
-├── pages/
+├── pages/`
 │   ├── Home.jsx
 │   ├── Results.jsx
 │
@@ -18,7 +17,6 @@ src/
 │   ├── SearchBar.css
 │   ├── SentimentChart.css
 │   ├── WordCloudView.css
-│   ├── ArticleCard.css
 │   ├── Home.css
 │   ├── Results.css
 │   ├── App.css

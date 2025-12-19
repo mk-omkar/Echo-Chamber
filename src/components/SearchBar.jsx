@@ -1,3 +1,4 @@
+// SearchBar.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/SearchBar.css';
@@ -8,8 +9,9 @@ function SearchBar() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (query.trim()) {
-      navigate(`/results?topic=${encodeURIComponent(query)}`);
+    const cleaned = query.trim().toLowerCase();
+    if (cleaned) {
+      navigate(`/results?q=${encodeURIComponent(cleaned)}`);
     }
   };
 
