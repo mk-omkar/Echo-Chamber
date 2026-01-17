@@ -7,7 +7,7 @@ const ArticleSchema = new mongoose.Schema({
   sentiment: String,
   summary: String,
   fullContent: String,
-  link: String
+  sourceLink: String
 });
 
 // IMPORTANT: third parameter forces collection name = "data"

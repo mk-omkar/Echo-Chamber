@@ -8,7 +8,7 @@ function ArticleCard({
   sentiment,
   summary,
   fullContent,
-  wikiLink
+  sourceLink
 }) {
   const [showPopup, setShowPopup] = useState(false);
 
@@ -23,27 +23,18 @@ function ArticleCard({
         data-bias={bias}
         data-sentiment={sentiment}
       >
-        {/* Badges */}
         <div className="bias-badge">{bias}</div>
         <div className="sentiment-badge">{sentiment}</div>
 
-        {/* Title */}
         <h4>{title}</h4>
-
-        {/* Summary */}
         <p className="summary">{summary}</p>
 
-        {/* Read More */}
-        <button
-          type="button"
-          className="read-more-btn"
-          onClick={openPopup}
-        >
+        <button className="read-more-btn" onClick={openPopup}>
           ▼ Read More
         </button>
       </div>
 
-      {/* POPUP MODAL */}
+      {/* POPUP */}
       {showPopup &&
         ReactDOM.createPortal(
           <div className="popup-overlay" onClick={closePopup}>
@@ -51,16 +42,12 @@ function ArticleCard({
               className="popup-content"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Close Button */}
               <button className="close-btn" onClick={closePopup}>
                 &times;
               </button>
 
-              {/* Colored Meta Labels */}
               <div className="popup-meta">
-                <span
-                  className={`popup-badge popup-bias ${bias.toLowerCase()}`}
-                >
+                <span className={`popup-badge popup-bias ${bias.toLowerCase()}`}>
                   {bias}
                 </span>
                 <span
@@ -70,23 +57,21 @@ function ArticleCard({
                 </span>
               </div>
 
-              {/* Title */}
               <h2>{title}</h2>
 
-              {/* Scrollable Content */}
               <div className="popup-body">
                 <p>{fullContent}</p>
               </div>
 
-              {/* Wikipedia Link */}
-              {wikiLink && (
+              {/* ✅ SOURCE LINK */}
+              {sourceLink && (
                 <div className="wiki-link">
                   <a
-                    href={wikiLink}
+                    href={sourceLink}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    🔗 Read more on Wikipedia
+                    🔗 Read original source
                   </a>
                 </div>
               )}

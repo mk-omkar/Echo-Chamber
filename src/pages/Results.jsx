@@ -83,7 +83,7 @@ function Results() {
                       sentiment={article.sentiment}
                       summary={article.summary}
                       fullContent={article.fullContent}
-                      wikiLink={article.wikiLink}
+                      sourceLink={article.sourceLink} 
                     />
                   ))}
                 </div>
@@ -98,6 +98,8 @@ function Results() {
           </section>
         )}
       </main>
+
+      <Footer />
     </div>
   );
 }
